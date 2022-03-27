@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseRemoteConfig
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
 
@@ -95,6 +96,7 @@ extension ViewController {
             
             let confirmAction = UIAlertAction(title: "확인하기", style: .default) {_ in 
                 //Google Analytics
+                Analytics.logEvent("promotion_alert", parameters: nil)
             }
             
             let cancelAction = UIAlertAction(title: "취소", style: .cancel)
